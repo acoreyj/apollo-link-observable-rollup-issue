@@ -1,6 +1,6 @@
 Demonstrate issue with rollup (or any commonjs) and zen-observable-ts in apollo-link
 
-See compiled rollup-graph-link.umd.js which is compiled by rollup for browsers has a require (`var Observable = require('zen-observable');`) statement which will error. This is because zenObservable.js (node_modules/zen-observable-ts/lib) combines a require and export (`export var Observable = require('zen-observable');` which makes commonjs ignore it.
+See compiled rollup-graph-link.umd.js which is compiled by rollup (`npm run build`) for browsers has a require (`var Observable = require('zen-observable');`) statement which will error. This is because zenObservable.js (node_modules/zen-observable-ts/lib) combines a require and export (`export var Observable = require('zen-observable');` which makes commonjs ignore it.
 
 If we change zenObservable.js to import/export like so it works.
 
