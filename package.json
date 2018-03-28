@@ -1,9 +1,7 @@
 {
   "name": "rollup-starter-lib",
   "version": "1.0.0",
-  "main": "dist/rollup-graph-link.cjs.js",
-  "module": "dist/rollup-graph-link.esm.js",
-  "browser": "dist/rollup-graph-link.umd.js",
+  "browser": "rollup-graph-link.umd.js",
   "dependencies": {
 		"ms": "^2.0.0",
 		"apollo-link": "^1.2.1",
