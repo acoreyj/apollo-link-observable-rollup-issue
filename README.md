@@ -9,6 +9,8 @@ import * as zenObservable from 'zen-observable';
 export var Observable = zenObservable['default'];
 ```
 
+See rollup-graph-link-fixed.umd.js which is compiled with this change.
+
 Note this looks strange as we are importing * and exporting default but TypeScript (which this zenObservable.js is compiled from) doesn't see that zen-observable has a default so errors on a default import like `import zenObservable from 'zen-observable';`
 But on doing a * import the result actually ends up with a property default which is the constructor we want. So what we can do is set the export to the default property of the * import. Normal ES modules see the default fine, just TypeScript doesn't. I'm not familiar enough with any of this to know why this strange behavior of default is happening, something do with how zen-observable is handling it's exports I'm guessing. Perhaps it is fixed in the latest zen-observable though? 
 
