@@ -1,0 +1,26 @@
+{
+  "name": "rollup-starter-lib",
+  "version": "1.0.0",
+  "main": "dist/rollup-graph-link.cjs.js",
+  "module": "dist/rollup-graph-link.esm.js",
+  "browser": "dist/rollup-graph-link.umd.js",
+  "dependencies": {
+		"ms": "^2.0.0",
+		"apollo-link": "^1.2.1",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "rollup": "^0.57.0",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
