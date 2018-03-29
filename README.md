@@ -4,7 +4,7 @@ See compiled [rollup-graph-link.umd.js](https://github.com/acoreyj/apollo-link-o
 
 
 
-##Update 
+## Update 
 
 in the (https://github.com/apollographql/apollo-link/issues/558) Pull Request I added the allowSyntheticDefaultImports to the tsConfig so now the fixed zenObservable.js will look more normal
 
@@ -14,7 +14,7 @@ export var Observable = zenObservable;
 ```
 
 
-##Original
+## Original
 
 If we change zenObservable.js to import/export like so it works.
 
