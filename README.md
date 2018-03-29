@@ -6,7 +6,7 @@ See compiled [rollup-graph-link.umd.js](https://github.com/acoreyj/apollo-link-o
 
 ## Update 
 
-in the (https://github.com/apollographql/apollo-link/issues/558) Pull Request I added the allowSyntheticDefaultImports to the tsConfig so now the fixed zenObservable.js will look more normal
+in the [Pull Request](https://github.com/apollographql/apollo-link/pull/559) I added the allowSyntheticDefaultImports to the tsConfig so now the fixed zenObservable.js will look more normal
 
 ```
 import zenObservable from 'zen-observable';
