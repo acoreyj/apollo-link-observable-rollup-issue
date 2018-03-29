@@ -2,6 +2,20 @@ Demonstrate issue with rollup (or any commonjs) and zen-observable-ts in apollo-
 
 See compiled [rollup-graph-link.umd.js](https://github.com/acoreyj/apollo-link-observable-rollup-issue/blob/master/rollup-graph-link.umd.js) which is compiled by rollup (`npm run build`) for browsers has a require (`var Observable = require('zen-observable');`) statement which will error. This is because zenObservable.js (node_modules/zen-observable-ts/lib) combines a require and export (`export var Observable = require('zen-observable');` which makes commonjs ignore it.
 
+
+
+##Update 
+
+in the (https://github.com/apollographql/apollo-link/issues/558) Pull Request I added the allowSyntheticDefaultImports to the tsConfig so now the fixed zenObservable.js will look more normal
+
+```
+import zenObservable from 'zen-observable';
+export var Observable = zenObservable;
+```
+
+
+##Original
+
 If we change zenObservable.js to import/export like so it works.
 
 ```
